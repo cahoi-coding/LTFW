@@ -169,43 +169,43 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Account.cs">
-      <DependentUpon>HAHA.tt</DependentUpon>
+      <DependentUpon>HIHI.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Comment.cs">
-      <DependentUpon>HAHA.tt</DependentUpon>
+      <DependentUpon>HIHI.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Follower.cs">
-      <DependentUpon>HAHA.tt</DependentUpon>
+      <DependentUpon>HIHI.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\HAHA.Context.cs">
+    <Compile Include="Models\HIHI.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>HAHA.Context.tt</DependentUpon>
+      <DependentUpon>HIHI.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\HAHA.cs">
+    <Compile Include="Models\HIHI.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>HAHA.tt</DependentUpon>
+      <DependentUpon>HIHI.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\HAHA.Designer.cs">
+    <Compile Include="Models\HIHI.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>HAHA.edmx</DependentUpon>
+      <DependentUpon>HIHI.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\Love.cs">
-      <DependentUpon>HAHA.tt</DependentUpon>
+      <DependentUpon>HIHI.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Notification.cs">
-      <DependentUpon>HAHA.tt</DependentUpon>
+      <DependentUpon>HIHI.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\NotifyObject.cs">
-      <DependentUpon>HAHA.tt</DependentUpon>
+      <DependentUpon>HIHI.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Post.cs">
-      <DependentUpon>HAHA.tt</DependentUpon>
+      <DependentUpon>HIHI.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\User.cs">
-      <DependentUpon>HAHA.tt</DependentUpon>
+      <DependentUpon>HIHI.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -218,15 +218,15 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Models\HAHA.Context.tt">
+    <Content Include="Models\HIHI.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>HAHA.edmx</DependentUpon>
-      <LastGenOutput>HAHA.Context.cs</LastGenOutput>
+      <DependentUpon>HIHI.edmx</DependentUpon>
+      <LastGenOutput>HIHI.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\HAHA.tt">
+    <Content Include="Models\HIHI.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>HAHA.edmx</DependentUpon>
-      <LastGenOutput>HAHA.cs</LastGenOutput>
+      <DependentUpon>HIHI.edmx</DependentUpon>
+      <LastGenOutput>HIHI.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -249,12 +249,12 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
-    <EntityDeploy Include="Models\HAHA.edmx">
+    <EntityDeploy Include="Models\HIHI.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>HAHA.Designer.cs</LastGenOutput>
+      <LastGenOutput>HIHI.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\HAHA.edmx.diagram">
-      <DependentUpon>HAHA.edmx</DependentUpon>
+    <Content Include="Models\HIHI.edmx.diagram">
+      <DependentUpon>HIHI.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />

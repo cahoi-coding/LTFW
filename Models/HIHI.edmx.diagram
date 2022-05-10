@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="af0bf9a0dcec490a8843ab358aabe885" Name="Diagram1">
+        <EntityTypeShape EntityType="HIHIModel.Account" Width="1.5" PointX="0.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HIHIModel.Comment" Width="1.5" PointX="7.5" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="HIHIModel.Follower" Width="1.5" PointX="5.25" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HIHIModel.Love" Width="1.5" PointX="7.5" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="HIHIModel.Notification" Width="1.5" PointX="5.25" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HIHIModel.NotifyObject" Width="1.5" PointX="3" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HIHIModel.Post" Width="1.5" PointX="5.25" PointY="18.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HIHIModel.User" Width="1.5" PointX="3" PointY="7.375" IsExpanded="true" />
+        <AssociationConnector Association="HIHIModel.FK__Users__userId__145C0A3F" ManuallyRouted="false" />
+        <AssociationConnector Association="HIHIModel.FK__Comments__postId__21B6055D" ManuallyRouted="false" />
+        <AssociationConnector Association="HIHIModel.FK__Comments__userId__22AA2996" ManuallyRouted="false" />
+        <AssociationConnector Association="HIHIModel.FK__Followers__follo__1A14E395" ManuallyRouted="false" />
+        <AssociationConnector Association="HIHIModel.FK__Followers__userI__1920BF5C" ManuallyRouted="false" />
+        <AssociationConnector Association="HIHIModel.FK__Loves__postId__267ABA7A" ManuallyRouted="false" />
+        <AssociationConnector Association="HIHIModel.FK__Loves__userId__276EDEB3" ManuallyRouted="false" />
+        <AssociationConnector Association="HIHIModel.FK__Notificat__notif__2E1BDC42" ManuallyRouted="false" />
+        <AssociationConnector Association="HIHIModel.FK__Notificat__userI__2D27B809" ManuallyRouted="false" />
+        <AssociationConnector Association="HIHIModel.FK__Posts__userId__1DE57479" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

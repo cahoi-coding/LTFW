@@ -10,7 +10,7 @@ namespace LTFW.Controllers
 {
     public class AllApisController : ApiController
     {
-        HAHAEntities db = new HAHAEntities();
+        HIHIEntities db = new HIHIEntities();
 
         int EXISTING_ACCOUNT = -2;
         int NOT_MATCHING_ACCOUNT = -3;

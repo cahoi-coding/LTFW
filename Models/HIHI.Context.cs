@@ -13,10 +13,10 @@ namespace LTFW.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DBEntity : DbContext
+    public partial class HIHIEntities : DbContext
     {
-        public DBEntity()
-            : base("name=DBEntity")
+        public HIHIEntities()
+            : base("name=HIHIEntities")
         {
         }
     

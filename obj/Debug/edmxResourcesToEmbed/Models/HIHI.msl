@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="HIHIModelStoreContainer" CdmEntityContainer="HIHIEntities">
+    <EntitySetMapping Name="Accounts">
+      <EntityTypeMapping TypeName="HIHIModel.Account">
+        <MappingFragment StoreEntitySet="Accounts">
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="accountName" ColumnName="account" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="createdAt" ColumnName="createdAt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Comments">
+      <EntityTypeMapping TypeName="HIHIModel.Comment">
+        <MappingFragment StoreEntitySet="Comments">
+          <ScalarProperty Name="commentId" ColumnName="commentId" />
+          <ScalarProperty Name="postId" ColumnName="postId" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="content" ColumnName="content" />
+          <ScalarProperty Name="createdAt" ColumnName="createdAt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Followers">
+      <EntityTypeMapping TypeName="HIHIModel.Follower">
+        <MappingFragment StoreEntitySet="Followers">
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="followerId" ColumnName="followerId" />
+          <ScalarProperty Name="followedAt" ColumnName="followedAt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Loves">
+      <EntityTypeMapping TypeName="HIHIModel.Love">
+        <MappingFragment StoreEntitySet="Loves">
+          <ScalarProperty Name="loveId" ColumnName="loveId" />
+          <ScalarProperty Name="postId" ColumnName="postId" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="createdAt" ColumnName="createdAt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Notifications">
+      <EntityTypeMapping TypeName="HIHIModel.Notification">
+        <MappingFragment StoreEntitySet="Notifications">
+          <ScalarProperty Name="notifyId" ColumnName="notifyId" />
+          <ScalarProperty Name="notifyObjId" ColumnName="notifyObjId" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="theId" ColumnName="theId" />
+          <ScalarProperty Name="isCheck" ColumnName="isCheck" />
+          <ScalarProperty Name="createdAt" ColumnName="createdAt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NotifyObjects">
+      <EntityTypeMapping TypeName="HIHIModel.NotifyObject">
+        <MappingFragment StoreEntitySet="NotifyObjects">
+          <ScalarProperty Name="notifyObjId" ColumnName="notifyObjId" />
+          <ScalarProperty Name="notifyObj" ColumnName="notifyObj" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Posts">
+      <EntityTypeMapping TypeName="HIHIModel.Post">
+        <MappingFragment StoreEntitySet="Posts">
+          <ScalarProperty Name="postId" ColumnName="postId" />
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="content" ColumnName="content" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="createdAt" ColumnName="createdAt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="HIHIModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="fullName" ColumnName="fullName" />
+          <ScalarProperty Name="avatar" ColumnName="avatar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
