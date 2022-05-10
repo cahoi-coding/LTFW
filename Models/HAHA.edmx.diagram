@@ -4,25 +4,25 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="4b735b0596204137b16c2d3b6a2dcb8e" Name="Diagram1">
-        <EntityTypeShape EntityType="HAHAModel.Account" Width="1.5" PointX="0.75" PointY="6.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="HAHAModel.Comment" Width="1.5" PointX="7.5" PointY="9.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="HAHAModel.Follower" Width="1.5" PointX="5.25" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="HAHAModel.Notification" Width="1.5" PointX="5.25" PointY="4" IsExpanded="true" />
-        <EntityTypeShape EntityType="HAHAModel.NotifyObject" Width="1.5" PointX="3" PointY="2.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="HAHAModel.Post" Width="1.5" PointX="5.25" PointY="13.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="HAHAModel.User" Width="1.5" PointX="3" PointY="5.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="HAHAModel.Love" Width="1.5" PointX="7.5" PointY="13.125" IsExpanded="true" />
+      <Diagram DiagramId="a785468396264109b7d6ee4c150b265b" Name="Diagram1">
+        <EntityTypeShape EntityType="HAHAModel.Account" Width="1.5" PointX="0.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HAHAModel.Comment" Width="1.5" PointX="7.5" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="HAHAModel.Follower" Width="1.5" PointX="5.25" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HAHAModel.Love" Width="1.5" PointX="7.5" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="HAHAModel.Notification" Width="1.5" PointX="5.25" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HAHAModel.NotifyObject" Width="1.5" PointX="3" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HAHAModel.Post" Width="1.5" PointX="5.25" PointY="18.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HAHAModel.User" Width="1.5" PointX="3" PointY="7.375" IsExpanded="true" />
         <AssociationConnector Association="HAHAModel.FK__Users__userId__286302EC" ManuallyRouted="false" />
         <AssociationConnector Association="HAHAModel.FK__Comments__postId__35BCFE0A" ManuallyRouted="false" />
         <AssociationConnector Association="HAHAModel.FK__Comments__userId__36B12243" ManuallyRouted="false" />
         <AssociationConnector Association="HAHAModel.FK__Followers__follo__2E1BDC42" ManuallyRouted="false" />
         <AssociationConnector Association="HAHAModel.FK__Followers__userI__2D27B809" ManuallyRouted="false" />
-        <AssociationConnector Association="HAHAModel.FK__Notificat__notif__412EB0B6" ManuallyRouted="false" />
-        <AssociationConnector Association="HAHAModel.FK__Notificat__userI__403A8C7D" ManuallyRouted="false" />
-        <AssociationConnector Association="HAHAModel.FK__Loves__postId__398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="HAHAModel.FK__Loves__postId__3A81B327" ManuallyRouted="false" />
+        <AssociationConnector Association="HAHAModel.FK__Loves__userId__3B75D760" ManuallyRouted="false" />
+        <AssociationConnector Association="HAHAModel.FK__Notificat__notif__4222D4EF" ManuallyRouted="false" />
+        <AssociationConnector Association="HAHAModel.FK__Notificat__userI__412EB0B6" ManuallyRouted="false" />
         <AssociationConnector Association="HAHAModel.FK__Posts__userId__31EC6D26" ManuallyRouted="false" />
-        <AssociationConnector Association="HAHAModel.FK__Loves__userId__3A81B327" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

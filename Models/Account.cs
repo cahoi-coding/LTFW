@@ -17,6 +17,6 @@ namespace LTFW.Models
         public int userId { get; set; }
         public string accountName { get; set; }
         public string password { get; set; }
-        public Nullable<System.DateTime> createdAt { get; set; }
+        public System.DateTime createdAt { get; set; }
     }
 }

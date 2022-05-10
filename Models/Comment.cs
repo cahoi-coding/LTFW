@@ -18,7 +18,7 @@ namespace LTFW.Models
         public int postId { get; set; }
         public int userId { get; set; }
         public string content { get; set; }
-        public Nullable<System.DateTime> createdAt { get; set; }
+        public System.DateTime createdAt { get; set; }
     
         public virtual Post Post { get; set; }
         public virtual User User { get; set; }

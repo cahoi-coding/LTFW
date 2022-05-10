@@ -33,14 +33,11 @@
           <Property Name="followerId" Type="int" Nullable="false" />
           <Property Name="followedAt" Type="datetime" Nullable="false" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'HAHA.dbo.Loves' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="Loves">
           <Key>
-            <PropertyRef Name="postId" />
-            <PropertyRef Name="userId" />
-            <PropertyRef Name="createdAt" />
+            <PropertyRef Name="loveId" />
           </Key>
+          <Property Name="loveId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="postId" Type="int" Nullable="false" />
           <Property Name="userId" Type="int" Nullable="false" />
           <Property Name="createdAt" Type="datetime" Nullable="false" />
@@ -129,7 +126,7 @@ warning 6002: The table/view 'HAHA.dbo.Loves' does not have a primary key define
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Loves__postId__398D8EEE">
+        <Association Name="FK__Loves__postId__3A81B327">
           <End Role="Posts" Type="Self.Posts" Multiplicity="1" />
           <End Role="Loves" Type="Self.Loves" Multiplicity="*" />
           <ReferentialConstraint>
@@ -141,7 +138,7 @@ warning 6002: The table/view 'HAHA.dbo.Loves' does not have a primary key define
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Loves__userId__3A81B327">
+        <Association Name="FK__Loves__userId__3B75D760">
           <End Role="Users" Type="Self.Users" Multiplicity="1" />
           <End Role="Loves" Type="Self.Loves" Multiplicity="*" />
           <ReferentialConstraint>
@@ -153,7 +150,7 @@ warning 6002: The table/view 'HAHA.dbo.Loves' does not have a primary key define
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Notificat__notif__412EB0B6">
+        <Association Name="FK__Notificat__notif__4222D4EF">
           <End Role="NotifyObjects" Type="Self.NotifyObjects" Multiplicity="1" />
           <End Role="Notifications" Type="Self.Notifications" Multiplicity="*" />
           <ReferentialConstraint>
@@ -165,7 +162,7 @@ warning 6002: The table/view 'HAHA.dbo.Loves' does not have a primary key define
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Notificat__userI__403A8C7D">
+        <Association Name="FK__Notificat__userI__412EB0B6">
           <End Role="Users" Type="Self.Users" Multiplicity="1" />
           <End Role="Notifications" Type="Self.Notifications" Multiplicity="*" />
           <ReferentialConstraint>
@@ -205,17 +202,11 @@ warning 6002: The table/view 'HAHA.dbo.Loves' does not have a primary key define
           <EntitySet Name="Accounts" EntityType="Self.Accounts" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Comments" EntityType="Self.Comments" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Followers" EntityType="Self.Followers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Loves" EntityType="Self.Loves" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Notifications" EntityType="Self.Notifications" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="NotifyObjects" EntityType="Self.NotifyObjects" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Posts" EntityType="Self.Posts" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Loves" EntityType="Self.Loves" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [Loves].[postId] AS [postId], 
-    [Loves].[userId] AS [userId], 
-    [Loves].[createdAt] AS [createdAt]
-    FROM [dbo].[Loves] AS [Loves]</DefiningQuery>
-          </EntitySet>
           <AssociationSet Name="FK__Comments__postId__35BCFE0A" Association="Self.FK__Comments__postId__35BCFE0A">
             <End Role="Posts" EntitySet="Posts" />
             <End Role="Comments" EntitySet="Comments" />
@@ -232,19 +223,19 @@ warning 6002: The table/view 'HAHA.dbo.Loves' does not have a primary key define
             <End Role="Users" EntitySet="Users" />
             <End Role="Followers" EntitySet="Followers" />
           </AssociationSet>
-          <AssociationSet Name="FK__Loves__postId__398D8EEE" Association="Self.FK__Loves__postId__398D8EEE">
+          <AssociationSet Name="FK__Loves__postId__3A81B327" Association="Self.FK__Loves__postId__3A81B327">
             <End Role="Posts" EntitySet="Posts" />
             <End Role="Loves" EntitySet="Loves" />
           </AssociationSet>
-          <AssociationSet Name="FK__Loves__userId__3A81B327" Association="Self.FK__Loves__userId__3A81B327">
+          <AssociationSet Name="FK__Loves__userId__3B75D760" Association="Self.FK__Loves__userId__3B75D760">
             <End Role="Users" EntitySet="Users" />
             <End Role="Loves" EntitySet="Loves" />
           </AssociationSet>
-          <AssociationSet Name="FK__Notificat__notif__412EB0B6" Association="Self.FK__Notificat__notif__412EB0B6">
+          <AssociationSet Name="FK__Notificat__notif__4222D4EF" Association="Self.FK__Notificat__notif__4222D4EF">
             <End Role="NotifyObjects" EntitySet="NotifyObjects" />
             <End Role="Notifications" EntitySet="Notifications" />
           </AssociationSet>
-          <AssociationSet Name="FK__Notificat__userI__403A8C7D" Association="Self.FK__Notificat__userI__403A8C7D">
+          <AssociationSet Name="FK__Notificat__userI__412EB0B6" Association="Self.FK__Notificat__userI__412EB0B6">
             <End Role="Users" EntitySet="Users" />
             <End Role="Notifications" EntitySet="Notifications" />
           </AssociationSet>
@@ -294,6 +285,17 @@ warning 6002: The table/view 'HAHA.dbo.Loves' does not have a primary key define
           <NavigationProperty Name="User" Relationship="Self.FK__Followers__follo__2E1BDC42" FromRole="Followers" ToRole="Users" />
           <NavigationProperty Name="User1" Relationship="Self.FK__Followers__userI__2D27B809" FromRole="Followers" ToRole="Users" />
         </EntityType>
+        <EntityType Name="Love">
+          <Key>
+            <PropertyRef Name="loveId" />
+          </Key>
+          <Property Name="loveId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="postId" Type="Int32" Nullable="false" />
+          <Property Name="userId" Type="Int32" Nullable="false" />
+          <Property Name="createdAt" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Post" Relationship="Self.FK__Loves__postId__3A81B327" FromRole="Loves" ToRole="Posts" />
+          <NavigationProperty Name="User" Relationship="Self.FK__Loves__userId__3B75D760" FromRole="Loves" ToRole="Users" />
+        </EntityType>
         <EntityType Name="Notification">
           <Key>
             <PropertyRef Name="notifyId" />
@@ -304,8 +306,8 @@ warning 6002: The table/view 'HAHA.dbo.Loves' does not have a primary key define
           <Property Name="theId" Type="Int32" Nullable="false" />
           <Property Name="isCheck" Type="Boolean" Nullable="false" />
           <Property Name="createdAt" Type="DateTime" Nullable="false" Precision="3" />
-          <NavigationProperty Name="NotifyObject" Relationship="Self.FK__Notificat__notif__412EB0B6" FromRole="Notifications" ToRole="NotifyObjects" />
-          <NavigationProperty Name="User" Relationship="Self.FK__Notificat__userI__403A8C7D" FromRole="Notifications" ToRole="Users" />
+          <NavigationProperty Name="NotifyObject" Relationship="Self.FK__Notificat__notif__4222D4EF" FromRole="Notifications" ToRole="NotifyObjects" />
+          <NavigationProperty Name="User" Relationship="Self.FK__Notificat__userI__412EB0B6" FromRole="Notifications" ToRole="Users" />
         </EntityType>
         <EntityType Name="NotifyObject">
           <Key>
@@ -313,7 +315,7 @@ warning 6002: The table/view 'HAHA.dbo.Loves' does not have a primary key define
           </Key>
           <Property Name="notifyObjId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="notifyObj" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="Notifications" Relationship="Self.FK__Notificat__notif__412EB0B6" FromRole="NotifyObjects" ToRole="Notifications" />
+          <NavigationProperty Name="Notifications" Relationship="Self.FK__Notificat__notif__4222D4EF" FromRole="NotifyObjects" ToRole="Notifications" />
         </EntityType>
         <EntityType Name="Post">
           <Key>
@@ -325,7 +327,7 @@ warning 6002: The table/view 'HAHA.dbo.Loves' does not have a primary key define
           <Property Name="image" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="createdAt" Type="DateTime" Nullable="false" Precision="3" />
           <NavigationProperty Name="Comments" Relationship="Self.FK__Comments__postId__35BCFE0A" FromRole="Posts" ToRole="Comments" />
-          <NavigationProperty Name="Loves" Relationship="Self.FK__Loves__postId__398D8EEE" FromRole="Posts" ToRole="Loves" />
+          <NavigationProperty Name="Loves" Relationship="Self.FK__Loves__postId__3A81B327" FromRole="Posts" ToRole="Loves" />
           <NavigationProperty Name="User" Relationship="Self.FK__Posts__userId__31EC6D26" FromRole="Posts" ToRole="Users" />
         </EntityType>
         <EntityType Name="User">
@@ -335,25 +337,12 @@ warning 6002: The table/view 'HAHA.dbo.Loves' does not have a primary key define
           <Property Name="userId" Type="Int32" Nullable="false" />
           <Property Name="fullName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="avatar" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Account" Relationship="Self.FK__Users__userId__286302EC" FromRole="Users" ToRole="Accounts" />
           <NavigationProperty Name="Comments" Relationship="Self.FK__Comments__userId__36B12243" FromRole="Users" ToRole="Comments" />
           <NavigationProperty Name="Followers" Relationship="Self.FK__Followers__follo__2E1BDC42" FromRole="Users" ToRole="Followers" />
           <NavigationProperty Name="Followers1" Relationship="Self.FK__Followers__userI__2D27B809" FromRole="Users" ToRole="Followers" />
-          <NavigationProperty Name="Notifications" Relationship="Self.FK__Notificat__userI__403A8C7D" FromRole="Users" ToRole="Notifications" />
+          <NavigationProperty Name="Loves" Relationship="Self.FK__Loves__userId__3B75D760" FromRole="Users" ToRole="Loves" />
+          <NavigationProperty Name="Notifications" Relationship="Self.FK__Notificat__userI__412EB0B6" FromRole="Users" ToRole="Notifications" />
           <NavigationProperty Name="Posts" Relationship="Self.FK__Posts__userId__31EC6D26" FromRole="Users" ToRole="Posts" />
-          <NavigationProperty Name="Loves" Relationship="Self.FK__Loves__userId__3A81B327" FromRole="Users" ToRole="Loves" />
-        </EntityType>
-        <EntityType Name="Love">
-          <Key>
-            <PropertyRef Name="postId" />
-            <PropertyRef Name="userId" />
-            <PropertyRef Name="createdAt" />
-          </Key>
-          <Property Name="postId" Type="Int32" Nullable="false" />
-          <Property Name="userId" Type="Int32" Nullable="false" />
-          <Property Name="createdAt" Type="DateTime" Nullable="false" Precision="3" />
-          <NavigationProperty Name="Post" Relationship="Self.FK__Loves__postId__398D8EEE" FromRole="Loves" ToRole="Posts" />
-          <NavigationProperty Name="User" Relationship="Self.FK__Loves__userId__3A81B327" FromRole="Loves" ToRole="Users" />
         </EntityType>
         <Association Name="FK__Users__userId__286302EC">
           <End Role="Accounts" Type="Self.Account" Multiplicity="1" />
@@ -415,7 +404,31 @@ warning 6002: The table/view 'HAHA.dbo.Loves' does not have a primary key define
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Notificat__notif__412EB0B6">
+        <Association Name="FK__Loves__postId__3A81B327">
+          <End Role="Posts" Type="Self.Post" Multiplicity="1" />
+          <End Role="Loves" Type="Self.Love" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Posts">
+              <PropertyRef Name="postId" />
+            </Principal>
+            <Dependent Role="Loves">
+              <PropertyRef Name="postId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Loves__userId__3B75D760">
+          <End Role="Users" Type="Self.User" Multiplicity="1" />
+          <End Role="Loves" Type="Self.Love" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="userId" />
+            </Principal>
+            <Dependent Role="Loves">
+              <PropertyRef Name="userId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Notificat__notif__4222D4EF">
           <End Role="NotifyObjects" Type="Self.NotifyObject" Multiplicity="1" />
           <End Role="Notifications" Type="Self.Notification" Multiplicity="*" />
           <ReferentialConstraint>
@@ -427,7 +440,7 @@ warning 6002: The table/view 'HAHA.dbo.Loves' does not have a primary key define
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Notificat__userI__403A8C7D">
+        <Association Name="FK__Notificat__userI__412EB0B6">
           <End Role="Users" Type="Self.User" Multiplicity="1" />
           <End Role="Notifications" Type="Self.Notification" Multiplicity="*" />
           <ReferentialConstraint>
@@ -436,18 +449,6 @@ warning 6002: The table/view 'HAHA.dbo.Loves' does not have a primary key define
             </Principal>
             <Dependent Role="Notifications">
               <PropertyRef Name="userId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__Loves__postId__398D8EEE">
-          <End Role="Posts" Type="Self.Post" Multiplicity="1" />
-          <End Role="Loves" Type="Self.Love" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Posts">
-              <PropertyRef Name="postId" />
-            </Principal>
-            <Dependent Role="Loves">
-              <PropertyRef Name="postId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -463,27 +464,15 @@ warning 6002: The table/view 'HAHA.dbo.Loves' does not have a primary key define
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Loves__userId__3A81B327">
-          <End Role="Users" Type="Self.User" Multiplicity="1" />
-          <End Role="Loves" Type="Self.Love" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Users">
-              <PropertyRef Name="userId" />
-            </Principal>
-            <Dependent Role="Loves">
-              <PropertyRef Name="userId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <EntityContainer Name="HAHAEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="DBEntity" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Accounts" EntityType="Self.Account" />
           <EntitySet Name="Comments" EntityType="Self.Comment" />
           <EntitySet Name="Followers" EntityType="Self.Follower" />
+          <EntitySet Name="Loves" EntityType="Self.Love" />
           <EntitySet Name="Notifications" EntityType="Self.Notification" />
           <EntitySet Name="NotifyObjects" EntityType="Self.NotifyObject" />
           <EntitySet Name="Posts" EntityType="Self.Post" />
           <EntitySet Name="Users" EntityType="Self.User" />
-          <EntitySet Name="Loves" EntityType="Self.Love" />
           <AssociationSet Name="FK__Users__userId__286302EC" Association="Self.FK__Users__userId__286302EC">
             <End Role="Accounts" EntitySet="Accounts" />
             <End Role="Users" EntitySet="Users" />
@@ -504,25 +493,25 @@ warning 6002: The table/view 'HAHA.dbo.Loves' does not have a primary key define
             <End Role="Users" EntitySet="Users" />
             <End Role="Followers" EntitySet="Followers" />
           </AssociationSet>
-          <AssociationSet Name="FK__Notificat__notif__412EB0B6" Association="Self.FK__Notificat__notif__412EB0B6">
+          <AssociationSet Name="FK__Loves__postId__3A81B327" Association="Self.FK__Loves__postId__3A81B327">
+            <End Role="Posts" EntitySet="Posts" />
+            <End Role="Loves" EntitySet="Loves" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Loves__userId__3B75D760" Association="Self.FK__Loves__userId__3B75D760">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Loves" EntitySet="Loves" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Notificat__notif__4222D4EF" Association="Self.FK__Notificat__notif__4222D4EF">
             <End Role="NotifyObjects" EntitySet="NotifyObjects" />
             <End Role="Notifications" EntitySet="Notifications" />
           </AssociationSet>
-          <AssociationSet Name="FK__Notificat__userI__403A8C7D" Association="Self.FK__Notificat__userI__403A8C7D">
+          <AssociationSet Name="FK__Notificat__userI__412EB0B6" Association="Self.FK__Notificat__userI__412EB0B6">
             <End Role="Users" EntitySet="Users" />
             <End Role="Notifications" EntitySet="Notifications" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Loves__postId__398D8EEE" Association="Self.FK__Loves__postId__398D8EEE">
-            <End Role="Posts" EntitySet="Posts" />
-            <End Role="Loves" EntitySet="Loves" />
           </AssociationSet>
           <AssociationSet Name="FK__Posts__userId__31EC6D26" Association="Self.FK__Posts__userId__31EC6D26">
             <End Role="Users" EntitySet="Users" />
             <End Role="Posts" EntitySet="Posts" />
-          </AssociationSet>
-          <AssociationSet Name="FK__Loves__userId__3A81B327" Association="Self.FK__Loves__userId__3A81B327">
-            <End Role="Users" EntitySet="Users" />
-            <End Role="Loves" EntitySet="Loves" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
@@ -530,7 +519,7 @@ warning 6002: The table/view 'HAHA.dbo.Loves' does not have a primary key define
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="HAHAModelStoreContainer" CdmEntityContainer="HAHAEntities">
+        <EntityContainerMapping StorageEntityContainer="HAHAModelStoreContainer" CdmEntityContainer="DBEntity">
           <EntitySetMapping Name="Accounts">
             <EntityTypeMapping TypeName="HAHAModel.Account">
               <MappingFragment StoreEntitySet="Accounts">
@@ -558,6 +547,16 @@ warning 6002: The table/view 'HAHA.dbo.Loves' does not have a primary key define
                 <ScalarProperty Name="userId" ColumnName="userId" />
                 <ScalarProperty Name="followerId" ColumnName="followerId" />
                 <ScalarProperty Name="followedAt" ColumnName="followedAt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Loves">
+            <EntityTypeMapping TypeName="HAHAModel.Love">
+              <MappingFragment StoreEntitySet="Loves">
+                <ScalarProperty Name="loveId" ColumnName="loveId" />
+                <ScalarProperty Name="postId" ColumnName="postId" />
+                <ScalarProperty Name="userId" ColumnName="userId" />
+                <ScalarProperty Name="createdAt" ColumnName="createdAt" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -598,15 +597,6 @@ warning 6002: The table/view 'HAHA.dbo.Loves' does not have a primary key define
                 <ScalarProperty Name="userId" ColumnName="userId" />
                 <ScalarProperty Name="fullName" ColumnName="fullName" />
                 <ScalarProperty Name="avatar" ColumnName="avatar" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Loves">
-            <EntityTypeMapping TypeName="HAHAModel.Love">
-              <MappingFragment StoreEntitySet="Loves">
-                <ScalarProperty Name="postId" ColumnName="postId" />
-                <ScalarProperty Name="userId" ColumnName="userId" />
-                <ScalarProperty Name="createdAt" ColumnName="createdAt" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -14,9 +14,10 @@ namespace LTFW.Models
     
     public partial class Love
     {
+        public int loveId { get; set; }
         public int postId { get; set; }
         public int userId { get; set; }
-        public Nullable<System.DateTime> createdAt { get; set; }
+        public System.DateTime createdAt { get; set; }
     
         public virtual Post Post { get; set; }
         public virtual User User { get; set; }
