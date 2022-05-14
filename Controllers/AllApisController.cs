@@ -5,9 +5,13 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using LTFW.Models;
+using System.Web.Http.Cors;
+using Microsoft.AspNetCore.Mvc;
 
 namespace LTFW.Controllers
 {
+
+    [EnableCors(origins: "http://localhost:63342/", headers: "*", methods: "*")]
     public class AllApisController : ApiController
     {
         HIHIEntities db = new HIHIEntities();
@@ -18,38 +22,39 @@ namespace LTFW.Controllers
         int DB_ERROR = -1;
         int GENERAL_SUCCESSFULLY = 0;
 
-        [HttpGet]
-        [Route("api/accounts")]
+        [System.Web.Http.HttpGet]
+        [System.Web.Http.Route("api/accounts")]
         public IEnumerable<Account> getAccount()
         {
             return db.Accounts;
         }
 
 
-        [HttpPost]
-        [Route("api/accounts/sign-up")]
-        public int addAccount(Account newAccount)
+        [System.Web.Http.HttpPost]
+        [System.Web.Http.Route("api/accounts/sign-up")]
+        public HttpResponseMessage addAccount(Account newAccount)
         {
-            if (db.Accounts.Any(acc => acc.accountName == newAccount.accountName))
-                return this.EXISTING_ACCOUNT;
+            if (db.Accounts.Any(acc => acc.accountName == newAccount.accountName)) return Request.CreateResponse(HttpStatusCode.OK, this.EXISTING_ACCOUNT);
 
             newAccount.createdAt = System.DateTime.Now;
 
             try
             {
-                db.Accounts.SqlQuery($"insert into Accounts(userId, account, password) values('{newAccount.userId}', '{newAccount.accountName}', '{newAccount.password}')");
+                /*db.Accounts.SqlQuery($"insert into Accounts(userId, account, password) values('{newAccount.userId}', '{newAccount.accountName}', '{newAccount.password}')");*/
                 db.Accounts.Add(newAccount);
                 db.SaveChanges();
-                return newAccount.userId;
+                /*return (IActionResult)Ok(newAccount.userId);*/
+                return Request.CreateResponse(HttpStatusCode.OK, newAccount.userId);
             }
             catch
             {
-                return this.DB_ERROR;
+                /*return (IActionResult)Ok(this.DB_ERROR);*/
+                return Request.CreateResponse(HttpStatusCode.OK, this.DB_ERROR);
             }
         }
 
-        [HttpGet]
-        [Route("api/accounts/sign-in")]
+        [System.Web.Http.HttpGet]
+        [System.Web.Http.Route("api/accounts/sign-in")]
         public int checkAccount(Account account)
         {
             Account check = db.Accounts
@@ -61,8 +66,8 @@ namespace LTFW.Controllers
             return check == null ? this.NOT_MATCHING_ACCOUNT : check.userId;
         }
 
-        [HttpPost]
-        [Route("api/accounts/profile")]
+        [System.Web.Http.HttpPost]
+        [System.Web.Http.Route("api/accounts/profile")]
         public int addProfile(User user)
         {
             try
@@ -77,8 +82,8 @@ namespace LTFW.Controllers
             }
         }
 
-        [HttpGet]
-        [Route("api/accounts/profile/{userId}")]
+        [System.Web.Http.HttpGet]
+        [System.Web.Http.Route("api/accounts/profile/{userId}")]
         public User getProfile(int userId)
         {
             try
@@ -91,15 +96,15 @@ namespace LTFW.Controllers
             }
         }
 
-        [HttpGet]
-        [Route("api/posts")]
+        [System.Web.Http.HttpGet]
+        [System.Web.Http.Route("api/posts")]
         public IEnumerable<Post> getPosts()
         {
             return db.Posts.OrderBy(post => post.createdAt);
         }
 
-        [HttpPost]
-        [Route("api/posts")]
+        [System.Web.Http.HttpPost]
+        [System.Web.Http.Route("api/posts")]
         public bool addPost(Post newPost)
         {
             newPost.createdAt = System.DateTime.Now;
@@ -116,15 +121,15 @@ namespace LTFW.Controllers
             }
         }
 
-        [HttpGet]
-        [Route("api/post/{postId}/comments")]
+        [System.Web.Http.HttpGet]
+        [System.Web.Http.Route("api/post/{postId}/comments")]
         public IEnumerable<Comment> getComments(int postId)
         {
             return db.Comments.Where(cmt => cmt.postId == postId).OrderBy(cmt => cmt.createdAt);
         }
 
-        [HttpPost]
-        [Route("api/post/{postId}/comments")]
+        [System.Web.Http.HttpPost]
+        [System.Web.Http.Route("api/post/{postId}/comments")]
         public bool addComments(int postId, Comment comment)
         {
             comment.createdAt = System.DateTime.Now;
@@ -149,8 +154,8 @@ namespace LTFW.Controllers
             }
         }
 
-        [HttpGet]
-        [Route("api/post/{postId}/loves")]
+        [System.Web.Http.HttpGet]
+        [System.Web.Http.Route("api/post/{postId}/loves")]
         public int getLoves(int postId)
         {
             return db.Loves.Where(love => love.postId == postId).Count();
@@ -179,8 +184,8 @@ namespace LTFW.Controllers
             }
         }
 */
-        [HttpGet]
-        [Route("api/users/{userId}/notifications/")]
+        [System.Web.Http.HttpGet]
+        [System.Web.Http.Route("api/users/{userId}/notifications/")]
         public IEnumerable<Notification> getNotifications(int userId)
         {
             return db.Users.Find(userId).Notifications.OrderBy(noti => noti.createdAt);

@@ -176,3 +176,28 @@ C:\Users\This is PC\Desktop\LTFW\obj\Debug\LTFW.csproj.CoreCompileInputs.cache
 C:\Users\This is PC\Desktop\LTFW\obj\Debug\LTFW.csproj.CopyComplete
 C:\Users\This is PC\Desktop\LTFW\obj\Debug\LTFW.dll
 C:\Users\This is PC\Desktop\LTFW\obj\Debug\LTFW.pdb
+C:\Users\admin\Desktop\LTFW\bin\System.Web.Cors.dll
+C:\Users\admin\Desktop\LTFW\bin\System.Web.Http.Cors.dll
+C:\Users\admin\Desktop\LTFW\bin\System.Web.Http.Cors.xml
+C:\Users\admin\Desktop\LTFW\bin\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Users\admin\Desktop\LTFW\bin\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\admin\Desktop\LTFW\bin\Microsoft.AspNetCore.Mvc.Abstractions.dll
+C:\Users\admin\Desktop\LTFW\bin\Microsoft.AspNetCore.Routing.Abstractions.dll
+C:\Users\admin\Desktop\LTFW\bin\Microsoft.Extensions.Primitives.dll
+C:\Users\admin\Desktop\LTFW\bin\Microsoft.Net.Http.Headers.dll
+C:\Users\admin\Desktop\LTFW\bin\System.Buffers.dll
+C:\Users\admin\Desktop\LTFW\bin\System.Memory.dll
+C:\Users\admin\Desktop\LTFW\bin\System.Numerics.Vectors.dll
+C:\Users\admin\Desktop\LTFW\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\admin\Desktop\LTFW\bin\System.Text.Encodings.Web.dll
+C:\Users\admin\Desktop\LTFW\bin\Microsoft.AspNetCore.Http.Abstractions.xml
+C:\Users\admin\Desktop\LTFW\bin\Microsoft.AspNetCore.Http.Features.xml
+C:\Users\admin\Desktop\LTFW\bin\Microsoft.AspNetCore.Mvc.Abstractions.xml
+C:\Users\admin\Desktop\LTFW\bin\Microsoft.AspNetCore.Routing.Abstractions.xml
+C:\Users\admin\Desktop\LTFW\bin\Microsoft.Extensions.Primitives.xml
+C:\Users\admin\Desktop\LTFW\bin\Microsoft.Net.Http.Headers.xml
+C:\Users\admin\Desktop\LTFW\bin\System.Buffers.xml
+C:\Users\admin\Desktop\LTFW\bin\System.Memory.xml
+C:\Users\admin\Desktop\LTFW\bin\System.Numerics.Vectors.xml
+C:\Users\admin\Desktop\LTFW\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\admin\Desktop\LTFW\bin\System.Text.Encodings.Web.xml

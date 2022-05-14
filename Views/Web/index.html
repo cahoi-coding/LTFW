@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheet/app.css">
+    <link rel="stylesheet" href="/stylesheet/comment.css">  
+    <script src="/js/index.js"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!--header-->
+    <header class="header">
+        <ul class="header-list">
+            <li class="header-ele"><a href="" class="header-link"></a></li>
+            <li class="header-ele"><a href="" id="logo" class="header-link">Chec Tiec</a></li>
+            <li class="header-ele"><a href="" class="header-link"></a></li>
+        </ul>
+    </header>
+
+    <!--main-->
+    <main class="main" id="index">
+        <input type="checkbox" class="comment-checkbox-open" name="" id="comment-checkbox-open" style="display: none;">
+        <div class="cmt-container" >
+            <ul class="cmt-header">
+                <li class="cmt-header-ele" onclick="hideCmtModel()">
+                    <i class="ri-arrow-left-line" ></i>
+                </li>
+                <li class="title-primary cmt-header-ele">
+                    comment
+                </li>
+                <li class="cmt-header-ele">
+                    <i class="ri-share-line"></i>
+                </li>
+            </ul>
+            <div class="cmt-input">
+                <div class="cmt-user-image">
+                    <img src="/images/vangoghmuseum-s0071V1962v-800.jpg" alt="">
+                </div>
+                <div class="input">
+                    <input name="cmt" placeholder="Add a comment ..." type="text">
+                    <div class="send-btn">send</div>
+                </div>
+            </div>
+            <ul class="cmt-list">
+                <li class="cmt-ele">
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="post-container">
+            <div class="post-ele">
+                <div class="post-header">
+                    <div class="post-user-image">
+                        <img src="/images/vangoghmuseum-s0071V1962v-800.jpg" alt="">
+                    </div>
+                    <div class="post-info">
+                        <span class="post-user-name">phamvu</span>
+                        <span class="post-time">March, 20th 2022</span>
+                    </div>
+                </div>
+                <div class="post-image">
+                    <img src="/images/vangoghmuseum-s0071V1962v-800.jpg" alt="">
+                </div>
+                <div class="post-bottom">
+                    <ul class="post-tool">
+                        <li class="post-tool-ele">
+                            <i class="ri-heart-line love-active"></i>
+                            <!--                    <i class="ri-heart-fill"></i>-->
+                        </li>
+                        <li class="post-tool-ele" onclick="showCmtModel()">
+                            <i class="ri-chat-1-line"></i>
+                            <!--                    <i class="ri-chat-1-fill"></i>-->
+                        </li>
+                        <li class="post-tool-ele">
+                            <i class="ri-share-line"></i>
+                            <!--                    <i class="ri-share-fill"></i>-->
+                        </li>
+                    </ul>
+                    <div class="love-amount">
+                        100,000 lovers
+                    </div>
+                    <div class="post-des">
+                        <span class="post-user-name">phamvu</span>
+                        : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus at corporis dolorem
+                        dolores earum ex facilis illo, illum laboriosam minus molestiae natus neque numquam odit
+                        praesentium qui ratione temporibus voluptatum.
+                    </div>
+                </div>
+            </div>
+            <div class="post-ele">
+                <div class="post-header">
+                    <div class="post-user-image">
+                        <img src="/images/vangoghmuseum-s0071V1962v-800.jpg" alt="">
+                    </div>
+                    <div class="post-info">
+                        <span class="post-user-name">phamvu</span>
+                        <span class="post-time">March, 20th 2022</span>
+                    </div>
+                </div>
+                <div class="post-image">
+                    <img src="/images/vangoghmuseum-s0071V1962v-800.jpg" alt="">
+                </div>
+                <div class="post-bottom">
+                    <ul class="post-tool">
+                        <li class="post-tool-ele">
+                            <i class="ri-heart-line love-active"></i>
+                            <!--                    <i class="ri-heart-fill"></i>-->
+                        </li>
+                        <li class="post-tool-ele" onclick="showCmtModel()">
+                            <i class="ri-chat-1-line"></i>
+                            <!--                    <i class="ri-chat-1-fill"></i>-->
+                        </li>
+                        <li class="post-tool-ele">
+                            <i class="ri-share-line"></i>
+                            <!--                    <i class="ri-share-fill"></i>-->
+                        </li>
+                    </ul>
+                    <div class="love-amount">
+                        100,000 lovers
+                    </div>
+                    <div class="post-des">
+                        <span class="post-user-name">phamvu</span>
+                        : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus at corporis dolorem
+                        dolores earum ex facilis illo, illum laboriosam minus molestiae natus neque numquam odit
+                        praesentium qui ratione temporibus voluptatum.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!--footer-->
+    <footer class="footer">
+        <ul class="footer-list">
+            <li class="footer-ele"><a href="./index.html" id="index-page" class="footer-link">
+                    <i class="ri-home-line"></i>
+                    <!--            <i class="ri-home-fill"></i>-->
+                </a></li>
+            <li class="footer-ele"><a href="" class="footer-link">
+                    <i class="ri-search-line"></i>
+                    <!--            <i class="ri-search-fill"></i>-->
+                </a></li>
+            <li class="footer-ele"><a href="./pages/add-image.html" class="footer-link">
+                    <i class="ri-image-add-line"></i>
+                    <!--            <i class="ri-image-add-fill"></i>-->
+                </a></li>
+            <li class="footer-ele"><a href="./pages/notifications.html" class="footer-link">
+                    <i class="ri-notification-line"></i>
+                    <!--            <i class="ri-notification-fill"></i>-->
+                </a></li>
+            <li class="footer-ele"><a href="./pages/profile.html" class="footer-link">
+                    <img src="/images/vangoghmuseum-s0071V1962v-800.jpg" id="user-image" alt="">
+                </a></li>
+        </ul>
+    </footer>
+
+</body>
+
+</html>

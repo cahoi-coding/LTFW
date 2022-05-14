@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheet/app.css">
+
+    <script src="/js/index.js"></script>
+
+    <title>SI-SU</title>
+</head>
+
+<body id="si-su">
+
+    <!--main-->
+    <main class="main">
+
+        <div class="hide" id="sign-up">
+            <div class="sign-up">
+                <div class="title">
+                    sign-up
+                </div>
+                <div class="email-label">
+                    <div class="label">email</div>
+                    <input type="text" name="email-su" id="email-su">
+                </div>
+                <div class="password-label">
+                    <div class="label">password</div>
+                    <input type="text" name="password-su" id="password-su">
+                </div>
+                <div class="password-label">
+                    <div class="label">password-re</div>
+                    <input type="text" name="password-su-re" id="password-su-re">
+                </div>
+                <div class="btn-group">
+                    <div class="btn" onclick="show1()">
+                        login
+                    </div>
+                    <div class="btn">
+                        go
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="log-in">
+            <div class="log-in">
+                <div class="title">login</div>
+                <div class="email-label">
+                    <div class="label">email</div>
+                    <input type="text" name="email-li" id="email-li">
+                </div>
+                <div class="password-label">
+                    <div class="label">password</div>
+                    <input type="text" name="password-li" id="password-li">
+                </div>
+                <div class="btn-group">
+                    <div class="btn" onclick="show()">
+                        sign-up
+                    </div>
+                    <div class="btn" onclick="location.href='createProfile.html';">
+                        go
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <script>
+            function show() {
+                document.getElementById("sign-up").style = "display:block";
+                document.getElementById("log-in").style.display = 'none';
+            }
+            function show1() {
+                document.getElementById("log-in").style.display = 'block';
+                document.getElementById("sign-up").style.display = 'none';
+            }
+            window.location
+        </script>
+
+    </main>
+
+    <!--footer-->
+    <!--<footer class="footer">-->
+    <!--    <ul class="footer-list">-->
+    <!--        <li class="footer-ele"><a href="" id="index-page" class="footer-link">-->
+    <!--            <i class="ri-home-line"></i>-->
+    <!--            &lt;!&ndash;            <i class="ri-home-fill"></i>&ndash;&gt;-->
+    <!--        </a></li>-->
+    <!--        <li class="footer-ele"><a href="" class="footer-link">-->
+    <!--            <i class="ri-search-line"></i>-->
+    <!--            &lt;!&ndash;            <i class="ri-search-fill"></i>&ndash;&gt;-->
+    <!--        </a></li>-->
+    <!--        <li class="footer-ele"><a href="" class="footer-link">-->
+    <!--            <i class="ri-image-add-line"></i>-->
+    <!--            &lt;!&ndash;            <i class="ri-image-add-fill"></i>&ndash;&gt;-->
+    <!--        </a></li>-->
+    <!--        <li class="footer-ele"><a href="" class="footer-link">-->
+    <!--            <i class="ri-notification-line"></i>-->
+    <!--            &lt;!&ndash;            <i class="ri-notification-fill"></i>&ndash;&gt;-->
+    <!--        </a></li>-->
+    <!--        <li class="footer-ele"><a href="" class="footer-link">-->
+    <!--            <img src="/images/vangoghmuseum-s0071V1962v-800.jpg" id="user-image" alt="">-->
+    <!--        </a></li>-->
+    <!--    </ul>-->
+    <!--</footer>-->
+
+</body>
+
+</html>
